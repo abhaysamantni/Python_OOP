@@ -28,3 +28,5 @@ class BankAccount:
     def get_balance(self):
         return self.balance
 
+    def set_balance(self, x):
+        self.balance=x
