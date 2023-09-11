@@ -6,11 +6,9 @@ class Circle:
 
     def __init__(self):
         self.radius = 1.0
-        self.__scalingFactor = float(1.0)
         
     def calculate_area(self):
-        return self.__scalingFactor * math.pi * self.radius**2
-        #return math.pi * self.radius**2
+        return math.pi * self.radius**2
 
     def resize_circle(self, new_radius):
         self.radius=new_radius
