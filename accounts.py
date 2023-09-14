@@ -37,9 +37,15 @@ class SavingsAccount:
 
     def withdraw_funds(self, amount):
         if(self.__balance)>=amount:
-            return self.__balance-=amount
+            x = self.__balance - amount
+            return x
+    
         else:
             return -1
+        
+    def deposit_funds(self, amount):
+        self.__balance += amount
+    
 # The CD account represents a certificate of
 # deposit (CD) account. It is a subclass of
 # the SavingsAccount class.
