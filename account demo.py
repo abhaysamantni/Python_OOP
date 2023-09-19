@@ -12,8 +12,7 @@ def main():
     balance = float(input('Balance: '))
 
     # Create a SavingsAccount object.
-    savings = accounts.SavingsAccount(acct_num, int_rate, \
-                                      balance)
+    savings = accounts.SavingsAccount()
 
     # Get the account number, interest rate,
     # account balance, and maturity date for a CD.
@@ -22,9 +21,11 @@ def main():
     int_rate = float(input('Interest rate: '))
     balance = float(input('Balance: '))
     maturity = input('Maturity date: ')
-
+    savings.set_account_num(acct_num)
+    savings.set_balance(balance)
+    savings.set_
     # Create a CD object.
-    cd = accounts.CD(acct_num, int_rate, balance, maturity)
+    cd = accounts.CD()
 
     # Display the data entered.
     print('Here is the data you entered:')

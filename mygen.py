@@ -17,12 +17,3 @@ def MyGen():
     n += 2
     print('This is printed at last')
     yield n
-
-
-#n1=MyGen()
-#print(n1)
-#print(next(n1))
-#print(next(n1))
-#print(next(n1))
-#n2=MyGen()
-#print(n2)
