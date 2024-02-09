@@ -19,7 +19,7 @@ def main():
     print()
     show_mammal_info(cat)
     print()
-    show_mammal_info('I am a string')
+    show_mammal_info(sheep)
 
 # The show_mammal_info function accepts an object
 # as an argument, and calls its show_species

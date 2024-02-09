@@ -17,9 +17,9 @@ class BankAccount:
     def __init__(self):
         """
         Initializes a new instance of the BankAccount class.
-        The initial balance is set to 1000.0.
+        The initial balance is set to 0.0.
         """
-        self.__balance = float(1000.0)
+        self.__balance = float(0.0)
 
     def deposit(self, amount):
         """

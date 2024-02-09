@@ -1,6 +1,7 @@
 # The SavingsAccount class represents a
 # savings account.
-
+import datetime
+ERRORCODE_BASE=-20000
 class SavingsAccount:
     
     # The __init__ method accepts arguments for the
@@ -41,7 +42,7 @@ class SavingsAccount:
             return x
     
         else:
-            return -1
+            return ERRORCODE_BASE-1
         
     def deposit_funds(self, amount):
         self.__balance += amount
@@ -77,3 +78,14 @@ class CD(SavingsAccount):
     
     def renew_automatic(self, new_duration):
         self.__maturity_date=self.__maturity_date+new_duration
+
+    def withdraw_funds(self, amount):
+        todays_date = datetime.date.today()
+        if todays_date >= self.__maturity_date:
+            if(self.__balance)>=amount:
+                x = self.__balance - amount
+                return x
+            else:
+                return ERRORCODE_BASE -1
+        else:
+            return ERRORCODE_BASE -2
